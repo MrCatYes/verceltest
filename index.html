@@ -1,0 +1,54 @@
+<!-- Travail de Keven Aubin-->
+
+<!DOCTYPE html>
+<html lang="fr" id="page2">
+  <head>
+    <meta charset="utf-8">
+    <title>New York Voyages Inc</title>
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <script src="./scripts/script.js"></script>
+  </head>
+  <body>
+    <!-- Barre de navigation. le premier lien mène à cette page. Les autres n'ont pas de cible.-->
+    <nav>
+      <ul>
+        <!-- Un sélecteur est appliqué au premier item de la liste afin de pouvoir le cibler facilement par la suite pour en changer la couleur. -->
+        <li><a href="./index.html" id="active">Accueil</a></li>
+        <li><a href="./pages/produit.html">Produits</a></li>
+        <li><a href="">Service</a></li>
+      </ul>
+    </nav>
+    <!-- Le main est constitué de deux sections. La première présente l'article et l'image. La seconde présente le convertisseur. -->
+    <main>
+      <section id="section1">
+        <article>
+          <p><span>Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Etiam nunc est,
+            sodales a tortor sit amet, gravida luctus ligula. Mauris convallis a eros at rutrum.
+            Aenean molestie erat massa, eu ullamcorper nisl consectetur ut.</p>
+          <p>Cras rutrum tortor a sagittis pretium. Nunc aliquet tincidunt tellus bibendum maximus.
+            Duis rutrum elit non hendrerit tempor. Orci varius natoque penatibus et magnis dis
+            parturient montes, nascetur ridiculus mus.</p>
+        </article>
+        <figure>
+          <img src="images/statut.jpg" alt="Statue de la liberté"/>
+		  
+		 <!-- <img src="img_chania.jpg" alt="Flowers in Chania" width="460" height="345"> -->
+
+        </figure>
+      </section>
+      <section id="section2">
+        <!-- Au clic du bouton, l'utilisateur est invité à entrer un montant. Voir la feuille script.js -->
+        <button onclick="calculUS()">Conver. en us</button>
+        <p id="tauxChange">Taux du : 06/02/2019 (1 us = 1.32 ca)</p>
+      </section>
+    </main>
+    <!-- footer de la page, ne comprenant que le copyright -->
+    <footer>
+      <p>copyright 2019</p>
+    </footer>
+    <!-- Appel du script modifiant l'élément avec comme id #tauxChange -->
+    <script>
+      mettreGras("tauxChange");
+    </script>
+  </body>
+</html>

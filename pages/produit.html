@@ -1,0 +1,81 @@
+<!-- Travail de Keven Aubin-->
+
+<!DOCTYPE html>
+<html lang="fr" style="background-color:lightgray;" >
+  <head>
+    <meta charset="utf-8">
+    <title>New York Voyages Inc</title>
+    <link rel="stylesheet" href="./../styles/style.css"/>
+  </head>
+  <body>
+    <!-- Barre de navigation. le premier lien mène à cette page. Les autres n'ont pas de cible.-->
+    <nav>
+      <ul>
+        <!-- Un sélecteur est appliqué au premier item de la liste afin de pouvoir le cibler facilement par la suite pour en changer la couleur. -->
+        <li><a href="./../index.html">Accueil</a></li>
+        <li><a href="./produit.html" id="active">Produits</a></li>
+        <li><a href="">Service</a></li>
+      </ul>
+    </nav>
+    <!-- Le main est constitué de deux sections. La première présente l'article et l'image. La seconde présente le convertisseur. -->
+    <main>
+      <section id="formulaire">
+        <h1>Formulaire d'enregistrement d'un produit</h2>
+        <form id="questionnaire">
+          <section id="gauche">
+            <span id="erreurNomProduit">erreur champ vide</span>
+            <div class="items">
+              <label>Nom produit:</label>
+              <input type=text required placeholder="nom produit" id="nomProduit">
+            </div>
+            <span id="erreurPrix">erreur prix doit être réel</span>
+            <div class="items">
+              <label>Prix:</label>
+              <input type=text placeholder="prix" id="prix">
+            </div>
+            <span id="erreurQuantite">erreur champ supérieur à 0</span>
+            <div class="items">
+              <label>Quantité:</label>
+              <input type=text required placeholder="quantite" id="quantite">
+            </div>
+          </section>
+          <section id="droite">
+            <span id="erreurFournisseur">erreur champ vide</span>
+            <div class="items">
+              <label>Fournisseur:</label>
+              <input type=text required placeholder="fournisseur" id="fournisseur">
+            </div>
+            <span id="erreurDate">erreur respecter le format</span>
+            <div class="items">
+              <label>Date Achat:</label>
+              <input type=text placeholder="jj-mm-aaaa" id="dateAchat">
+            </div>
+          </section>
+        </form>
+        <section id="boutons">
+          <button type="button" id="ajouter">Ajouter</button>
+          <button type="button" id="supprimer">Supprimer</button>
+        </section>
+        <section id="resultats">
+          <table id="tableauResultats">
+            <tr>
+              <th>&#8681; Nom Produit</th>
+              <th>&#8681; Prix</th>
+              <th>&#8681; Quantity</th>
+              <th>&#8681; Fournisseur</th>
+              <th>&#8681; Date d'achat</th>
+              <th>&#8681; Supprimer</th>
+            </tr>
+          </table>
+        </section>
+      </section>
+    </main>
+    <!-- footer de la page, ne comprenant que le copyright -->
+    <footer id="fp2">
+      <p>copyright 2019</p>
+    </footer>
+    <!-- Appel du script modifiant l'élément avec comme id #tauxChange -->
+    <script src="./../scripts/produits.js">
+    </script>
+  </body>
+</html>
